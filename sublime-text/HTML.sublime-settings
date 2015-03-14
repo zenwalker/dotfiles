@@ -1,0 +1,9 @@
+{
+	"extensions":
+	[
+		"eco",
+		"beml",
+		"tag"
+	],
+	"tab_size": 2
+}

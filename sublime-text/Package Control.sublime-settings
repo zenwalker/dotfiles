@@ -1,0 +1,26 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"CodeFormatter",
+		"DevDocs",
+		"EditorConfig",
+		"Emmet",
+		"Github Color Theme",
+		"Hayaku - tools for writing CSS faster",
+		"Hyperion for gettext",
+		"Jade",
+		"MarkdownEditing",
+		"Package Control",
+		"PlainTasks",
+		"ReactJS",
+		"Sass",
+		"Stylus",
+		"Theme - Soda",
+		"Theme - Spacegray",
+		"Vala"
+	]
+}

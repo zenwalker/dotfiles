@@ -1,0 +1,20 @@
+[
+  {"args": null, "command": "split_selection_into_lines"},
+  {"args": { "extend": false, "to": "eol"}, "command": "move_to"},
+  {"args": { "extend": false, "to": "bol"}, "command": "move_to"},
+  {"args": null, "command": "left_delete"},
+  {"args": { "characters": " "}, "command": "insert"},
+  {"args": null, "command": "single_selection"},
+  {"args": { "extend": false, "to": "bol"}, "command": "move_to"},
+  {"args": null, "command": "right_delete"},
+  {"args": { "characters": "\n"}, "command": "insert"},
+  {"args": { "by": "word_ends", "forward": true}, "command": "move"},
+  {"args": null, "command": "right_delete"},
+  {"args": { "characters": "\n"}, "command": "insert"},
+  {"args": null, "command": "wrap_lines"},
+  {"args": { "extend": true, "to": "bol"}, "command": "move_to"},
+  {"args": { "by": "lines", "extend": true, "forward": false}, "command": "move"},
+  {"args": { "by": "lines", "extend": true, "forward": false}, "command": "move"},
+  {"args": { "by": "lines", "extend": true, "forward": false}, "command": "move"},
+  {"args": { "extend": false, "to": "bol"}, "command": "move_to"}
+]
