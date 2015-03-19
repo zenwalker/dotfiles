@@ -1,7 +1,11 @@
+# Rebind media keys for using it as navigation keys.
+# Fn+Left=Home, Fn+Right=End, Fn+Up=PageUp, Fn+Down=PageDown.
+# Tested on ASUS X550.
+
 partial alphanumeric_keys
 xkb_symbols "evdev" {
-    key <I171> {	[ End		]	};
-    key <I172> {	[ Next 		] 	};
-    key <I173> {	[ Home		]	};
-    key <I174> {	[ Prior		]	};
+    key <I171> { [ End     ] };
+    key <I172> { [ Next    ] };
+    key <I173> { [ Home    ] };
+    key <I174> { [ Prior   ] };
 };
