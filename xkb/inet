@@ -3,7 +3,7 @@
 # Tested on ASUS X550.
 
 partial alphanumeric_keys
-xkb_symbols "evdev" {
+xkb_symbols "inet_extend" {
     key <I171> { [ End     ] };
     key <I172> { [ Next    ] };
     key <I173> { [ Home    ] };

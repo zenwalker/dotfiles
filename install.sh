@@ -1,6 +1,5 @@
 #!/bin/bash
 
-ln -s ./vimrc ~/.vimrc
-ln -s ./zshrc ~/.zshrc
-
-ln -s ./sublime-text ~/.config/sublime-text-3/Packages/User
+ln -s ~/.dotfiles/vimrc ~/.vimrc
+ln -s ~/.dotfiles/zshrc ~/.zshrc
+ln -s ~/.dotfiles/sublime-text ~/.config/sublime-text-3/Packages/User
