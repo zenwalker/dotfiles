@@ -1,0 +1,4 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document regexp("chrome://browser/content/devtools/.*") {
+  * { font-size: 13px !important }
+}
