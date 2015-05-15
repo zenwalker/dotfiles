@@ -40,7 +40,7 @@ ssh-push-key () {
 # sources
 
 VIRTUALENV_SOURCE="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-NVM_SOURCE="~/.nvm/nvm.sh"
+NVM_SOURCE="$HOME/.nvm/nvm.sh"
 
 [ -f $VIRTUALENV_SOURCE ] && source $VIRTUALENV_SOURCE
 [ -f $NVM_SOURCE ] && source ~/.nvm/nvm.sh
