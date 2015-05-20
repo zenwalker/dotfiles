@@ -1,0 +1,4 @@
+DATE=$(date +%Y%m%d)
+OUTPUT="$HOME/Pictures/yandex-$DATE.jpg"
+curl https://yandex.ru/images/today?size=1920x1080 -o $OUTPUT
+gsettings set org.gnome.desktop.background picture-uri "file://$OUTPUT"
