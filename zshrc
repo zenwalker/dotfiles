@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games":~/.bin
+export PATH=$PATH:~/.bin:~/.dotfiles/bin
 
 # export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
