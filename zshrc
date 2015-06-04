@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="jreese"
 
 # CASE_SENSITIVE="true"
@@ -36,6 +37,11 @@ export DEBEMAIL="zenwalker2@gmail.com"
 ssh-push-key () {
     cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'
 }
+
+# java
+
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd \
+                      -Dsun.java2d.xrender=true"
 
 # sources
 
