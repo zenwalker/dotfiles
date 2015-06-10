@@ -26,27 +26,49 @@ export PATH=$PATH:~/.bin:~/.dotfiles/bin
 # export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
 # golang
 export GOPATH="$HOME/.golang"
+
 
 # dpkg
 export DEBEMAIL="zenwalker2@gmail.com"
 
+
 # functions
 
-ssh-push-key () {
+push_ssh_key () {
     cat ~/.ssh/id_rsa.pub | ssh $1 'cat >> ~/.ssh/authorized_keys'
 }
+
+lazy_source () {
+    eval "$1 () { [ -f $2 ] && source $2 && $1 \$@ }"
+}
+
 
 # java
 
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd \
                       -Dsun.java2d.xrender=true"
 
-# sources
 
-VIRTUALENV_SOURCE="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-NVM_SOURCE="$HOME/.nvm/nvm.sh"
+# nvm
 
-[ -f $VIRTUALENV_SOURCE ] && source $VIRTUALENV_SOURCE
-[ -f $NVM_SOURCE ] && source ~/.nvm/nvm.sh
+NVM_SOURCE=$(brew --prefix nvm)/nvm.sh
+NVM_DIR=$HOME/.nvm
+
+lazy_source nvm $NVM_SOURCE
+
+
+# virtualenv
+
+VIRTUALENV_SOURCE=/usr/local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
+_venv_commands=(workon mkvirtualenv rmvirtualenv)
+
+for command in "${_venv_commands[@]}"; do
+    lazy_source $command $VIRTUALENV_SOURCE
+done
+
+unset _venv_commands
