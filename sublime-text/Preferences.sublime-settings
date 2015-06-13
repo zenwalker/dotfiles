@@ -2,7 +2,7 @@
 	"animation_enabled": false,
 	"bold_folder_labels": false,
 	"caret_style": "blink",
-	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
@@ -20,7 +20,7 @@
 		"vendor"
 	],
 	"font_face": "Ubuntu Mono",
-	"font_size": 14,
+	"font_size": 16,
 	"hayaku_CSS_prefixes_disable": true,
 	"ignored_packages":
 	[
@@ -34,7 +34,7 @@
 	"show_tab_close_buttons": false,
 	"soda_classic_tabs": false,
 	"tab_size": 4,
-	"theme": "Spacegray Eighties.sublime-theme",
+	"theme": "El Capitan.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"tree_animation_enabled": false,
 	"trim_trailing_white_space_on_save": true

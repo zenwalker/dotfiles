@@ -1,5 +1,5 @@
 {
-  "color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Dark.tmTheme",
+  "color_scheme": "Packages/MarkdownEditing/MarkdownEditor.tmTheme",
   "word_wrap": "auto",
   "wrap_width": 80,
   "tab_size": 2
