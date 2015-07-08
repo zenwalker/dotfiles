@@ -60,7 +60,7 @@ set wildmode=full
     let g:user_emmet_install_global = 0
     autocmd FileType html,css EmmetInstall
 
-  Plugin 'Solarized'
+  Plugin 'altercation/vim-colors-solarized'
   Plugin 'digitaltoad/vim-jade'
 
   Plugin 'plasticboy/vim-markdown'
@@ -96,5 +96,5 @@ if !has('gui_running')
 endif
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized

@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="jreese"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="jreese"
 
 # CASE_SENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
