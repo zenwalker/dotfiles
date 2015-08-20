@@ -3,8 +3,9 @@
 	"bold_folder_labels": false,
 	"caret_style": "blink",
 	"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
-	"enable_tab_scrolling": false,
+	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": true,
+	"default_line_ending": "unix",
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -20,12 +21,14 @@
 		"vendor"
 	],
 	"font_face": "Ubuntu Mono",
-	"font_size": 16,
+	"font_size": 18,
 	"hayaku_CSS_prefixes_disable": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown"
+		"Markdown",
+		"RestructuredText",
+		"JavaScript",
+		"Vintage"
 	],
 	"overlay_scroll_bars": "enabled",
 	"save_on_focus_lost": false,

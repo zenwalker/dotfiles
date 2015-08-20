@@ -2,6 +2,8 @@
 	"extensions":
 	[
 		"jsx",
-		"es6"
-	]
+		"es6",
+		"js"
+	],
+	"tab_size": 2
 }
