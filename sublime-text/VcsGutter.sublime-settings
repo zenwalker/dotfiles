@@ -1,0 +1,9 @@
+{
+    "live_mode": false,
+
+    "vcs_paths": {
+        "hg": "/usr/local/bin/hg",
+        "diff": "/usr/bin/diff",
+        "git": "/usr/bin/git"
+    }
+}

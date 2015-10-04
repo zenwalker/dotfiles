@@ -1,9 +1,11 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"Babel",
 		"Better CoffeeScript",
 		"CMake",
@@ -17,7 +19,8 @@
 		"Hyperion for gettext",
 		"Jade",
 		"LESS",
-		"MarkdownEditing",
+		"Markdown Extended",
+		"One Dark Color Scheme",
 		"Package Control",
 		"PlainTasks",
 		"RestructuredText Improved",
@@ -25,7 +28,7 @@
 		"Stylus",
 		"Tag",
 		"Theme - El Capitan",
-		"Theme - Soda",
-		"Vala"
+		"Vala",
+		"VCS Gutter"
 	]
 }
