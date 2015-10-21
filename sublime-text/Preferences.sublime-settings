@@ -4,7 +4,7 @@
 	"caret_style": "blink",
 	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
 	"default_line_ending": "unix",
-	"enable_tab_scrolling": false,
+	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[

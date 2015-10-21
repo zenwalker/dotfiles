@@ -1,4 +1,5 @@
 {
     "wrap_width": 80,
-    "word_wrap": true
+    "word_wrap": true,
+    "tab_size": 2
 }
