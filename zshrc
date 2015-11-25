@@ -1,4 +1,3 @@
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
@@ -15,6 +14,13 @@ ENABLE_CORRECTION="true"
 # HIST_STAMPS="mm/dd/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+alias won='workon'
+alias mp='./manage.py'
+alias mpr='./manage.py runserver'
+alias mpmm='./manage.py makemigrations'
+alias mpm='./manage.py migrate'
+
+
 plugins=(git mercurial debian)
 
 source $ZSH/oh-my-zsh.sh
@@ -26,6 +32,9 @@ export PATH=$PATH:~/.bin:~/.dotfiles/bin
 # export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # golang
 export GOPATH="$HOME/.golang"
