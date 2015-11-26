@@ -18,11 +18,10 @@
 		"__pycache__",
 		"bower_components",
 		"node_modules",
-		"vendor"
+		"vendor/bundle"
 	],
 	"font_face": "Ubuntu Mono",
-	"font_size": 18,
-	"hayaku_CSS_prefixes_disable": true,
+	"font_size": 22,
 	"ignored_packages":
 	[
 		"JavaScript",

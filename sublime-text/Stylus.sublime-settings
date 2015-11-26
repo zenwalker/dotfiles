@@ -1,4 +1,4 @@
 {
     "tab_size": 2,
-    "hayaku_CSS_whitespace_after_colon": ": "
+    "css.valueSeparator": ": "
 }
