@@ -54,6 +54,9 @@ lazy_source () {
     eval "$1 () { [ -f $2 ] && source $2 && $1 \$@ }"
 }
 
+fix_id3() {
+    find. -name "*.mp3" -print0 | xargs -0 mid3iconv -e CP1251 -d
+}
 
 # java
 
