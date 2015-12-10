@@ -21,7 +21,7 @@ alias mpmm='./manage.py makemigrations'
 alias mpm='./manage.py migrate'
 
 
-plugins=(git mercurial debian)
+plugins=(git mercurial virtualenv fabric terminalapp web-search)
 
 source $ZSH/oh-my-zsh.sh
 
