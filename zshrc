@@ -1,24 +1,13 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
-#ZSH_THEME="jreese"
 
-# CASE_SENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
-# export UPDATE_ZSH_DAYS=13
-# DISABLE_LS_COLORS="true"
-# DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
-# COMPLETION_WAITING_DOTS="true"
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-# HIST_STAMPS="mm/dd/yyyy"
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-alias won='workon'
-alias mp='./manage.py'
-alias mpr='./manage.py runserver'
-alias mpmm='./manage.py makemigrations'
-alias mpm='./manage.py migrate'
+alias won="workon"
+alias mp="./manage.py"
+alias mprs="./manage.py runserver"
+alias mpfs="./manage.py frontend"
+alias mpmm="./manage.py makemigrations"
+alias mpm="./manage.py migrate"
 
 
 plugins=(git mercurial virtualenv fabric terminalapp web-search)
@@ -27,18 +16,12 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt share_history
 
-export PATH=$PATH:~/.bin:~/.dotfiles/bin
-
-# export ARCHFLAGS="-arch x86_64"
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export PATH=$PATH:$HOME/.bin:$HOME/.dotfiles/bin
+export EDITOR=nano
 
 # locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# golang
-export GOPATH="$HOME/.golang"
-
 
 # dpkg
 export DEBEMAIL="zenwalker2@gmail.com"
@@ -62,6 +45,12 @@ fix_id3() {
 
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd \
                       -Dsun.java2d.xrender=true"
+
+
+# golang
+
+export GOPATH=$HOME/golang
+export PATH=$PATH:$GOPATH/bin
 
 
 # nvm
