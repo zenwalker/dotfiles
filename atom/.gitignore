@@ -1,0 +1,9 @@
+storage
+compile-cache
+blob-store
+gammar-config
+dev
+.apm
+.npm
+.node-gyp
+packages

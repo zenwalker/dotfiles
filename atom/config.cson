@@ -1,0 +1,109 @@
+"*":
+  Zen:
+    fullscreen: false
+    softWrap: true
+    width: 70
+  "autocomplete-plus": {}
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "minimap-autohide"
+      "minimap"
+      "dev-live-reload"
+      "language-ruby-on-rails"
+      "language-objective-c"
+      "language-mustache"
+      "language-csharp"
+      "language-clojure"
+      "language-c"
+      "welcome"
+      "metrics"
+      "spell-check"
+      "wrap-guide"
+      "status-bar"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      "*.orig"
+      "*.pyc"
+      "__pycache__"
+      "node_modules"
+      "bower_components"
+      ".DS_Store"
+    ]
+    openEmptyEditorOnStart: false
+    themes: [
+      "one-dark-ui"
+      "sepia-syntax"
+    ]
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 22
+    invisibles: {}
+    lineHeight: 1.2
+    scrollPastEnd: true
+    showInvisibles: true
+    tabType: "soft"
+  emmet:
+    extensionsPath: "~/.dotfiles/emmet"
+    stylus:
+      autoInsertVendorPrefixes: false
+      valueSeparator: ": "
+  "exception-reporting":
+    userId: "f97c5b89-0f81-089d-a5ba-144a2164b68d"
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
+  "fuzzy-finder": {}
+  "isotope-ui":
+    minimalMode: true
+  jekyll: {}
+  "language-babel":
+    babelMapsAddUrl: false
+    transpileOnSave: false
+  linter:
+    ignoreMatchedFiles: "/**/*.min.{js,css},*.md"
+    lintOnFlyInterval: 1000
+    showErrorPanel: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+    showProviderName: false
+  "linter-flake8":
+    executablePath: "/Users/maxim/.virtualenvs/django18/bin/flake8"
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-writer":
+    siteEngine: "jekyll"
+  minimap:
+    plugins:
+      "minimap-autohide": true
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui": {}
+  pigments: {}
+  react: {}
+  "spell-check": {}
+  "status-bar": {}
+  tabs: {}
+  "tree-view":
+    hideIgnoredNames: true
+  "unity-ui": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".basic.html.text":
+  editor:
+    softWrap: true
+".gfm.source":
+  editor:
+    showInvisibles: false
+    softWrapAtPreferredLineLength: true
+".go.source":
+  editor:
+    tabLength: 4
+".shell.source":
+  editor:
+    tabLength: 4
