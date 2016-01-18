@@ -21,7 +21,7 @@
 		"vendor/bundle"
 	],
 	"font_face": "Ubuntu Mono",
-	"font_size": 22,
+	"font_size": 24,
 	"ignored_packages":
 	[
 		"JavaScript",
