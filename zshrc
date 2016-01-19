@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-alias won="workon"
+alias won="venv"
 alias mp="./manage.py"
 alias mprs="./manage.py runserver"
 alias mpfs="./manage.py frontend"
@@ -50,6 +50,23 @@ lazy_source () {
 
 fix_id3() {
     find. -name "*.mp3" -print0 | xargs -0 mid3iconv -e CP1251 -d
+}
+
+venv() {
+    venv=$1
+
+    if [[ ! $venv ]]; then
+        if [[ -f ".venv" ]]; then
+            venv=$(cat .venv | sed "s/^ *//;s/ *$//")
+        elif [[ -d ".venv" ]]; then
+            source .venv/bin/activate
+        fi
+    fi
+
+    workon $venv
+    if [ $? -ne 0 ]; then
+        source "$venv/bin/activate"
+    fi
 }
 
 # java
