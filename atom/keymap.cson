@@ -1,0 +1,2 @@
+'atom-text-editor':
+  'cmd-l': 'grammar-selector:show'

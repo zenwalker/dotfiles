@@ -56,16 +56,16 @@ venv() {
     venv=$1
 
     if [[ ! $venv ]]; then
-        if [[ -f ".venv" ]]; then
-            venv=$(cat .venv | sed "s/^ *//;s/ *$//")
+        if [[ -f ".venvrc" ]]; then
+            venv=$(cat .venvrc | sed "s/^ *//;s/ *$//")
         elif [[ -d ".venv" ]]; then
             source .venv/bin/activate
         fi
-    fi
-
-    workon $venv
-    if [ $? -ne 0 ]; then
-        source "$venv/bin/activate"
+    else
+        workon $venv
+        if [ $? -ne 0 ]; then
+            source "$venv/bin/activate"
+        fi
     fi
 }
 

@@ -4,25 +4,15 @@
 }
 
 .tab-bar .tab::after {
-  left: -1px;
+  transition: none;
+}
+
+.platform-darwin atom-workspace.theme-one-light-ui {
+  border-top: none;
 }
 
 .autocomplete-suggestion-list {
   font-size: 0.8em;
-}
-
-[theme-one-dark-ui-layoutmode="compact"] atom-pane-container atom-pane {
-  border-bottom: none;
-  border-left: none;
-}
-
-atom-panel {
-  &.left {
-    border-right: 1px solid #201f1d;
-  }
-  &.bottom {
-    border-top: 1px solid #201f1d;
-  }
 }
 
 .platform-darwin {
@@ -36,7 +26,8 @@ atom-panel {
       rgba(0,0,0,1) 20%
     ) no-repeat;
   }
-  .tab-bar .tab:hover .title {
+  .tab-bar .tab:hover .title,
+  .tab-bar .tab.modified .title {
     -webkit-mask: linear-gradient(to left,
       rgba(0,0,0,0),
       rgba(0,0,0,1) 20%,
@@ -50,13 +41,55 @@ atom-panel {
 atom-text-editor::shadow {
   .bracket-matcher .region {
     position: absolute;
-    border: 1px solid rgba(0, 255, 0, 0.3);
-    background-color: rgba(0, 255, 0, 0.2);
+    border: 1px solid rgba(82, 139, 255, 0.3);
+    background-color: rgba(82, 139, 255, 0.2);
+    border-radius: 2px;
   }
   .gutter-container {
     z-index: 1;
     &.non-zero {
-      box-shadow: 1px 0 rgba(0,0,0, 0.1);
+      box-shadow: 3px 0 1px -2px rgba(0,0,0, 0.2);
     }
   }
+  .line-number {
+    padding-left: 1em;
+    padding-right: 0.5em;
+  }
+  .line-number .icon-right {
+    display: none;
+  }
+  .highlights .highlight-selected .region {
+    border-color: rgba(255,255,255, 0.2);
+    border-radius: 2px;
+  }
+}
+
+.status-bar {
+  height: 2.4em;
+  line-height: 2.4em;
+}
+
+.status-bar .flexbox-repaint-hack {
+  padding-left: 0;
+}
+
+// atom-pane-container atom-pane,
+// .tree-view .project-root.project-root:first-child {
+//   padding-top: 0.3em;
+//   padding-right: 0.3em;
+// }
+//
+// atom-workspace atom-panel-container.left:empty {
+//   padding-left: 0.3em;
+// }
+
+atom-text-editor {
+  overflow: hidden;
+  // &::before {
+  //   box-shadow: 0 0 1px 1px #282c34;
+  //   right: 0; left: 0; top: 0;
+  //   position: absolute;
+  //   z-index: 2;
+  //   content: "";
+  // }
 }
