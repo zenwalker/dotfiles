@@ -1,10 +1,12 @@
 .tab-bar .tab::before,
 .tree-view::before {
   content: none;
+  transition: none;
 }
 
 .tab-bar .tab::after {
   transition: none;
+  left: -0.5px;
 }
 
 .platform-darwin atom-workspace.theme-one-light-ui {
@@ -45,22 +47,20 @@ atom-text-editor::shadow {
     background-color: rgba(82, 139, 255, 0.2);
     border-radius: 2px;
   }
-  .gutter-container {
-    z-index: 1;
-    &.non-zero {
-      box-shadow: 3px 0 1px -2px rgba(0,0,0, 0.2);
-    }
-  }
-  .line-number {
-    padding-left: 1em;
-    padding-right: 0.5em;
-  }
-  .line-number .icon-right {
-    display: none;
-  }
   .highlights .highlight-selected .region {
     border-color: rgba(255,255,255, 0.2);
     border-radius: 2px;
+  }
+  .gutter .line-number {
+    padding-left: 1em;
+    padding-right: 0.5em;
+  }
+  .gutter .line-number.git-line-added,
+  .gutter .line-number.git-line-modified {
+    padding-left: ~"calc(1em - 2px)";
+  }
+  .gutter .line-number .icon-right {
+    display: none;
   }
 }
 
