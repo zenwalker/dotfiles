@@ -9,6 +9,9 @@
     fuzzyMatcher: false
     showDescriptions: false
     triggerCompletionRegex: "([a-zA-Z_][a-zA-Z0-9_]+)"
+  "autohide-tree-view":
+    animationSpeed: 100
+    showPinButton: false
   core:
     audioBeep: false
     disabledPackages: [
@@ -31,6 +34,7 @@
       "linter-eslint"
       "minimap-autohide"
       "minimap"
+      "linter-golinter"
     ]
     ignoredNames: [
       ".idea"
@@ -50,12 +54,11 @@
     openEmptyEditorOnStart: false
   editor:
     fontFamily: "Ubuntu Mono"
-    fontSize: 22
+    fontSize: 21
     invisibles: {}
     lineHeight: 1.3
     scrollPastEnd: true
     showInvisibles: true
-    tabType: "soft"
   emmet:
     extensionsPath: "~/.dotfiles/emmet"
     stylus:
@@ -70,8 +73,7 @@
     disableAnimation: true
   "fuzzy-finder": {}
   "git-diff": {}
-  "highlight-selected":
-    lightTheme: true
+  "highlight-selected": {}
   "indentation-indicator":
     indicatorPosition: "right"
   "isotope-light-ui": {}
@@ -95,6 +97,7 @@
       "E501"
       "E133"
     ]
+  "linter-golinter": {}
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer":
@@ -106,7 +109,10 @@
       "minimap-autohideDecorationsZIndex": 0
   "one-dark-ui":
     layoutMode: "Compact"
-  "one-light-ui": {}
+    tabSizing: "Even"
+  "one-light-ui":
+    layoutMode: "Compact"
+    tabSizing: "Even"
   pigments: {}
   "python-indent": {}
   react: {}
@@ -115,6 +121,7 @@
   tabs: {}
   tasks: {}
   "tree-view":
+    autoReveal: true
     displayVcsStatus: false
     hideIgnoredNames: true
     squashDirectoryNames: true
@@ -138,6 +145,9 @@
 ".html.php.text":
   editor:
     tabLength: 4
+".makefile.source":
+  editor:
+    tabLength: 4
 ".plain.text":
   editor:
     softWrap: true
@@ -148,5 +158,8 @@
     softWrapAtPreferredLineLength: true
     tabLength: 4
 ".shell.source":
+  editor:
+    tabLength: 4
+".source.sql":
   editor:
     tabLength: 4

@@ -1,46 +1,37 @@
 .tab-bar .tab::before,
 .tree-view::before {
+  // disable blue line on tabs
   content: none;
   transition: none;
 }
 
 .tab-bar .tab::after {
+  // fix tab borders (outline artifact)
   transition: none;
   left: -0.5px;
 }
 
-.platform-darwin atom-workspace.theme-one-light-ui {
-  border-top: none;
-}
-
 .autocomplete-suggestion-list {
+  // small font size in autocomplete
   font-size: 0.8em;
 }
 
 .platform-darwin {
+   // pull left close button on darwin machines
   .tab-bar .tab .close-icon {
     left: 0;
     right: auto !important;
-  }
-  .tab-bar .tab .title {
-    -webkit-mask: linear-gradient(to left,
-      rgba(0,0,0,0),
-      rgba(0,0,0,1) 20%
-    ) no-repeat;
+    transition: none;
   }
   .tab-bar .tab:hover .title,
   .tab-bar .tab.modified .title {
-    -webkit-mask: linear-gradient(to left,
-      rgba(0,0,0,0),
-      rgba(0,0,0,1) 20%,
-      rgba(0,0,0,1) 70%,
-      rgba(0,0,0,0) 95%
-    ) no-repeat;
-    -webkit-mask-position: 0;
+    -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat;
+    -webkit-mask-position: 1em 0;
   }
 }
 
 atom-text-editor::shadow {
+  // change highlight colors
   .bracket-matcher .region {
     position: absolute;
     border: 1px solid rgba(82, 139, 255, 0.3);
@@ -48,9 +39,12 @@ atom-text-editor::shadow {
     border-radius: 2px;
   }
   .highlights .highlight-selected .region {
-    border-color: rgba(255,255,255, 0.2);
+    border: 1px solid rgba(82, 139, 255, 0.3);
+    background-color: rgba(82, 139, 255, 0.1);
     border-radius: 2px;
   }
+
+  // minimize line gutter width
   .gutter .line-number {
     padding-left: 1em;
     padding-right: 0.5em;
@@ -65,31 +59,12 @@ atom-text-editor::shadow {
 }
 
 .status-bar {
-  height: 2.4em;
-  line-height: 2.4em;
+  // small status bar
+  height: 2.2em;
+  line-height: 2.2em;
 }
 
-.status-bar .flexbox-repaint-hack {
-  padding-left: 0;
-}
-
-// atom-pane-container atom-pane,
-// .tree-view .project-root.project-root:first-child {
-//   padding-top: 0.3em;
-//   padding-right: 0.3em;
-// }
-//
-// atom-workspace atom-panel-container.left:empty {
-//   padding-left: 0.3em;
-// }
-
-atom-text-editor {
-  overflow: hidden;
-  // &::before {
-  //   box-shadow: 0 0 1px 1px #282c34;
-  //   right: 0; left: 0; top: 0;
-  //   position: absolute;
-  //   z-index: 2;
-  //   content: "";
-  // }
+linter-bottom-status {
+  // remove margin in linter status
+  margin-left: 0;
 }
