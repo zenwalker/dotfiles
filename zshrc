@@ -9,6 +9,9 @@ alias mpfs="mp frontend"
 alias mpmm="mp makemigrations"
 alias mpm="mp migrate"
 
+# mercurial
+alias hgu="hg update"
+alias hgm="hg merge"
 
 plugins=(git mercurial virtualenv fabric terminalapp web-search)
 
@@ -106,11 +109,9 @@ lazy_source nvm $NVM_SOURCE
 VIRTUALENV_SOURCE=/usr/local/bin/virtualenvwrapper.sh
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
-_venv_commands=(workon mkvirtualenv rmvirtualenv)
-
+_venv_commands=(workon mkvirtualenv rmvirtualenv lsvirtualenv)
 for command in "${_venv_commands[@]}"; do
     lazy_source $command $VIRTUALENV_SOURCE
 done
-
 unset _venv_commands
 
