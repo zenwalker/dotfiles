@@ -33,8 +33,8 @@
       "keybinding-resolver"
       "linter-eslint"
       "minimap-autohide"
-      "minimap"
       "linter-golinter"
+      "minimap"
     ]
     ignoredNames: [
       ".idea"
@@ -50,11 +50,17 @@
       "bower_components"
       ".DS_Store"
       ".venv"
+      ".coverage"
+      "celerybeat-schedule"
     ]
     openEmptyEditorOnStart: false
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
     fontFamily: "Ubuntu Mono"
-    fontSize: 21
+    fontSize: 20
     invisibles: {}
     lineHeight: 1.3
     scrollPastEnd: true
@@ -91,11 +97,13 @@
     showProviderName: false
   "linter-eslint": {}
   "linter-flake8":
-    executablePath: "/Users/maxim/.virtualenvs/py35/bin/flake8"
+    flakeErrors: true
     hangClosing: true
     ignoreErrorCodes: [
-      "E501"
+      "E128"
       "E133"
+      "E501"
+      "E731"
     ]
   "linter-golinter": {}
   "markdown-preview":
@@ -104,6 +112,7 @@
     siteEngine: "jekyll"
   minimap:
     absoluteMode: true
+    displayPluginsControls: false
     plugins:
       "minimap-autohide": true
       "minimap-autohideDecorationsZIndex": 0
@@ -121,9 +130,10 @@
   tabs: {}
   tasks: {}
   "tree-view":
-    autoReveal: true
     displayVcsStatus: false
+    focusOnReveal: false
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "unity-ui": {}
   wakatime:
@@ -152,6 +162,10 @@
   editor:
     softWrap: true
     tabLength: 4
+".restructuredtext.text":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: true
 ".restructuredtext.text source.gfm.restructuredtext":
   editor:
     softWrap: true
