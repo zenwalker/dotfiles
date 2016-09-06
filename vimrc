@@ -60,8 +60,8 @@ set wildmode=full
     let g:user_emmet_install_global = 0
     autocmd FileType html,css EmmetInstall
 
-  Plugin 'altercation/vim-colors-solarized'
   Plugin 'digitaltoad/vim-jade'
+  Plugin 'juanedi/predawn.vim'
 
   Plugin 'plasticboy/vim-markdown'
     let g:vim_markdown_folding_disabled=1
@@ -96,5 +96,8 @@ if !has('gui_running')
 endif
 
 syntax enable
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme predawn
+
+" trasparent background
+hi Normal ctermbg=none
