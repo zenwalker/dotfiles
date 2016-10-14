@@ -1,6 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
+EDITOR="micro"
 
 alias won="venv"
 alias mp="python manage.py"
@@ -8,6 +9,7 @@ alias mprs="mp runserver"
 alias mpfs="mp frontend"
 alias mpmm="mp makemigrations"
 alias mpm="mp migrate"
+alias edit="$EDITOR"
 
 # mercurial
 alias hgu="hg update"

@@ -35,6 +35,7 @@
       "minimap-autohide"
       "linter-golinter"
       "minimap"
+      "status-bar"
     ]
     ignoredNames: [
       ".idea"
@@ -103,6 +104,7 @@
       "E128"
       "E133"
       "E501"
+      "E402"
       "E731"
     ]
   "linter-golinter": {}
@@ -133,8 +135,6 @@
     displayVcsStatus: false
     focusOnReveal: false
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
-    squashDirectoryNames: true
   "unity-ui": {}
   wakatime:
     apikey: "198f9bf9-0c79-4117-a65b-e9ce20ac8aaf"
