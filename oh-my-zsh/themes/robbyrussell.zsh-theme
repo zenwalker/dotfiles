@@ -1,9 +1,14 @@
+# based on https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/pure.zsh-theme
+
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable hg git
+zstyle ':vcs_info:*:*' formats "%s:%b"
+
+precmd() {
+    vcs_info
+}
+
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$reset_color%}'
-RPROMPT='%{$fg[yellow]%}$(virtualenv_prompt_info) %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$reset_color%}'
-
-ZSH_THEME_GIT_PROMPT_PREFIX="git:"
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}✗%{$reset_color%}"
-
-ZSH_THEME_HG_PROMPT_PREFIX="hg:"
+RPROMPT='%{$fg[yellow]%}$(virtualenv_prompt_info) %{$fg_bold[blue]%}$vcs_info_msg_0_%{$reset_color%}'

@@ -15,7 +15,7 @@ alias edit="$EDITOR"
 alias hgu="hg update"
 alias hgm="hg merge"
 
-plugins=(git mercurial virtualenv fabric terminalapp web-search)
+plugins=(virtualenv git mercurial)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +56,10 @@ lazy_source () {
 
 fix_id3_tags() {
     find. -name "*.mp3" -print0 | xargs -0 mid3iconv -e CP1251 -d
+}
+
+grep_files() {
+	ggrep -rio --exclude-dir={node_modules,bower_componens.idea,.git,.hg} $1 $2
 }
 
 venv() {
