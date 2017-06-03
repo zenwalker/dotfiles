@@ -1,0 +1,7 @@
+'.source.python':
+  'json.dumps':
+    'prefix': 'jd'
+    'body': """
+      import json
+      print(json.dumps(${1}, indent=2))
+    """

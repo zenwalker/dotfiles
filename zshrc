@@ -1,7 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
+export EDITOR=micro
+
 ZSH_THEME="robbyrussell"
-EDITOR="micro"
+DISABLE_AUTO_TITLE="true"
 
 alias won="venv"
 alias mp="python manage.py"
@@ -10,6 +12,7 @@ alias mpfs="mp frontend"
 alias mpmm="mp makemigrations"
 alias mpm="mp migrate"
 alias edit="$EDITOR"
+alias hosts="sudo $EDITOR /etc/hosts"
 
 # mercurial
 alias hgu="hg update"
@@ -22,7 +25,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt share_history
 
 export PATH=$PATH:$HOME/.bin:$HOME/.dotfiles/bin
-export EDITOR=nano
 
 # locale
 export LC_ALL=en_US.UTF-8
@@ -70,6 +72,8 @@ venv() {
             venv=$(cat .venvrc | sed "s/^ *//;s/ *$//")
         elif [[ -d ".venv" ]]; then
             source .venv/bin/activate
+        else
+            venv=$(basename $(pwd))
         fi
     fi
 
@@ -80,6 +84,14 @@ venv() {
             source $venv
         fi
     fi
+}
+
+update-window-title() {
+	echo -ne "\e]1;$PWD\a"
+}
+
+precmd() {
+	update-window-title
 }
 
 # ----
@@ -120,4 +132,9 @@ for command in "${_venv_commands[@]}"; do
     lazy_source $command $VIRTUALENV_SOURCE
 done
 unset _venv_commands
+
+
+# iterm2 shell integration
+
+source ~/.iterm2_shell_integration.`basename $SHELL`
 

@@ -1,37 +1,67 @@
-.tab-bar .tab::before,
-.tree-view::before {
-  // disable blue line on tabs
+@modified-tab-color: #568af2;
+// @modified-tab-color: #bc9548;
+
+// disable blue line on tabs
+atom-pane.active .tab.active::before {
   content: none;
-  transition: none;
 }
 
-.tab-bar .tab::after {
-  // fix tab borders (outline artifact)
-  transition: none;
-  left: -0.5px;
+// inscare tab height
+.tab-bar {
+  height: 2.8em;
+
+  .tab {
+    line-height: 2.8em;
+  }
 }
 
+// pull-left close button and customize modified indicator
+.tab-bar {
+  .tab .close-icon {
+    left: 0.5em;
+    top: 0.7em;
+  }
+  .tab.modified::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 0;
+    border-color: @modified-tab-color transparent transparent transparent;
+  }
+  .tab.modified:not(:hover) .close-icon {
+    display: none;
+  }
+}
+
+// hide dock toggle button
+.atom-dock-toggle-button-visible {
+  display: none;
+}
+
+// hide tabs in left pane
+atom-dock.left .tab-bar {
+  display: none;
+}
+
+// small font size in autocomplete
 .autocomplete-suggestion-list {
-  // small font size in autocomplete
   font-size: 0.8em;
 }
 
+// pull left close button on darwin machines
 .platform-darwin {
-   // pull left close button on darwin machines
   .tab-bar .tab .close-icon {
-    left: .77em;
-    right: auto !important;
     transition: none;
-  }
-  .tab-bar .tab:hover .title,
-  .tab-bar .tab.modified .title {
-    -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat;
-    -webkit-mask-position: 1em 0;
   }
 }
 
-atom-text-editor::shadow {
-  // change highlight colors
+// change brachet highlight colors
+atom-text-editor.editor {
   .bracket-matcher .region {
     position: absolute;
     border: 1px solid rgba(82, 139, 255, 0.3);
@@ -46,25 +76,85 @@ atom-text-editor::shadow {
 
   // minimize line gutter width
   .gutter .line-number {
-    padding-left: 1em;
     padding-right: 0.5em;
-  }
-  .gutter .line-number.git-line-added,
-  .gutter .line-number.git-line-modified {
-    padding-left: ~"calc(1em - 2px)";
   }
   .gutter .line-number .icon-right {
     display: none;
   }
+
+  // minimum opacity on wrap-guide
+  .wrap-guide {
+    opacity: 0.1;
+  }
 }
 
+// fix vertical align of linter bullet in gutter
+.linter-gutter.icon::before {
+  margin-top: 5px;
+}
+
+// remove margin in linter status
+linter-bottom-status {
+  margin-left: 0;
+}
+
+// fix linter tooltip bright style
+#linter-tooltip {
+  linter-message {
+    font-size: 0.8em;
+    padding: 4px 8px;
+
+    &.error {
+      border-left: none;
+      border-right: 4px #ff6347 solid;
+      background-color: #CCC;
+      color: #222;
+
+      &:first-child {
+        border-top: none;
+      }
+      &:last-child {
+        border-bottom: none;
+        &::before {
+          border-color: transparent transparent #999 #999;
+        }
+      }
+    }
+
+    &.warning {
+      border-left: none;
+      border-right: 4px #C98808 solid;
+      background-color: #CCC;
+      color: #222;
+      &:first-child {
+        border-top: none;
+      }
+      &:last-child {
+        border-bottom: none;
+        &::before {
+          border-color: transparent transparent #999 #999;
+        }
+      }
+    }
+
+    &:first-child {
+      border-top-right-radius: 2px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    &:last-child {
+      &::before {
+        border-width: 3px;
+        top: -3px;
+      }
+    }
+  }
+}
+
+// small status bar
 .status-bar {
-  // small status bar
   height: 2.2em;
   line-height: 2.2em;
-}
-
-linter-bottom-status {
-  // remove margin in linter status
-  margin-left: 0;
 }

@@ -1,2 +1,5 @@
 'atom-text-editor':
   'cmd-l': 'grammar-selector:show'
+
+'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
