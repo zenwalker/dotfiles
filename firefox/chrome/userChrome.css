@@ -1,4 +1,41 @@
-@namespace url(http://www.w3.org/1999/xhtml);
-@-moz-document regexp("chrome://browser/content/devtools/.*") {
-  * { font-size: 13px !important }
+/* Increase font size for bookmark bar */
+#PlacesToolbarItems,
+#sidebar-search-container #search-box,
+.sidebar-placesTree {
+  font-size: 13px !important;
 }
+
+/* Increase font size for tabs */
+label.tab-text {
+  font-size: 13px !important;
+}
+
+/* Remove extra spacing before and after tabs */
+.titlebar-spacer[type="pre-tabs"] {
+  width: 15px !important;
+}
+.titlebar-spacer[type="post-tabs"] {
+  width: 1px !important;
+}
+
+/* Increase the size of the url bar */
+#urlbar,
+#searchbar {
+  font-size: 1.3em !important;
+}
+
+/* Remove color border from url bar */
+#urlbar[focused="true"] #urlbar-background {
+  border: none !important;
+}
+
+/* Hide top tab bar for tree-style-tabs addon */
+/* https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules */
+/*#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+*/
